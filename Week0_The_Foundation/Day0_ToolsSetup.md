@@ -80,10 +80,13 @@ iverilog -V  # Check Icarus Verilog version
 gtkwave      # Open GTKWave GUI
 ```
 
-**Screenshot (Verification):**  
+**Screenshots (Verification):**  
+
 ![Yosys Setup Screenshot](images/day0_yosys_setup.png)  
-![Iverilog Setup Screenshot](images/day0_iverilog_setup.png) 
-![GTKWave Setup Screenshot](images/day0_gtkwave_setup.png)  
+---  
+![Iverilog Setup Screenshot](images/day0_iverilog_setup.png)  
+---  
+![GTKWave Setup Screenshot](images/day0_gtkwave_setup.png)
 
 ---
 
