@@ -43,8 +43,7 @@ make
 sudo make install
 ```
 
-**Screenshot (Yosys Installed):**  
-![Yosys Setup Screenshot](images/day0_yosys_setup.png)  
+
 
 ---
 
@@ -56,8 +55,7 @@ sudo apt-get update
 sudo apt-get install iverilog
 ```
 
-**Screenshot (iverilog Installed):**  
-![Iverilog Setup Screenshot](images/day0_iverilog_setup.png)  
+
 
 ---
 
@@ -69,8 +67,7 @@ sudo apt-get update
 sudo apt install gtkwave
 ```
 
-📸 **Screenshot (GTKWave Installed):**  
-![GTKWave Setup Screenshot](images/day0_gtkwave_setup.png)  
+
 
 ---
 
@@ -84,7 +81,9 @@ gtkwave      # Open GTKWave GUI
 ```
 
 **Screenshot (Verification):**  
-![Verification Screenshot](images/day0_verification.png)  
+![Yosys Setup Screenshot](images/day0_yosys_setup.png)  
+![Iverilog Setup Screenshot](images/day0_iverilog_setup.png) 
+![GTKWave Setup Screenshot](images/day0_gtkwave_setup.png)  
 
 ---
 
