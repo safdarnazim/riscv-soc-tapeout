@@ -55,7 +55,7 @@ Design.v + Testbench.v → [iverilog] → a.out → [execute] → waveform.vcd �
 2. **Execute:** Run the compiled output to generate VCD file
 3. **Visualize:** Open VCD file in GTKWave for waveform analysis
 4. **Verify:** Analyze waveforms to confirm correct functionality
-
+   
 ---
 
 ## Logic Synthesis with Yosys
@@ -134,6 +134,8 @@ gtkwave tb_good_mux.vcd
 - Generation of VCD file
 - Waveform verification in GTKWave showing correct multiplexer behavior
 
+<img width="1362" height="737" alt="gtk_wave_output" src="https://github.com/user-attachments/assets/9f4d330d-7ace-4910-bda2-13fe54419f1e" />
+
 ### Lab 2: Logic Synthesis with Yosys
 
 #### Objective
@@ -170,6 +172,8 @@ write_verilog -noattr good_mux_netlist.v
 - `abc`: Performs technology mapping using ABC tool
 - `show`: Displays the synthesized schematic
 - `write_verilog -noattr`: Writes netlist without attributes
+
+<img width="724" height="351" alt="schematic" src="https://github.com/user-attachments/assets/9142ac97-7b23-4d87-a480-bf53a6294067" />
 
 ---
 
