@@ -52,7 +52,10 @@ We explored **flip-flop implementations** in Verilog and their impact on synthes
   - **Asynchronous Reset**  
   - **Asynchronous Set**  
   - **Synchronous Reset**  
-- Simulated and synthesized these coding styles to observe behavior differences.  
+- Simulated and synthesized these coding styles to observe behavior differences.
+<img width="1366" height="733" alt="dff_asynres" src="https://github.com/user-attachments/assets/9fce559d-891a-484b-bdd8-7e0cdff5e48b" />
+<img width="1365" height="735" alt="dff_synres" src="https://github.com/user-attachments/assets/0c283fea-0c51-4786-92f9-e745612434ef" />
+
 
 ---
 
