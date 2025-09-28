@@ -35,21 +35,28 @@ Design + Gate-Level Verilog Models + Testbench --> iverilog --> .vcd --> GTKWave
 iverilog ternary_operator_mux.v tb_ternary_operator_mux.v
 ./a.out
 gtkwave tb_ternary_operator_mux.vcd
+```
+<img width="1363" height="357" alt="ternary_operator_mux" src="https://github.com/user-attachments/assets/5f87b7a6-e8fd-4804-874f-e212524c9eae" />
 
+```bash
 # Synthesize using Yosys
 yosys
-read_liberty -lib ./lib/sky130
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog ternary_operator_mux.v
 synth -top ternary_operator_mux
-abc -liberty ./lib/sky130
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 write_verilog -noattr ternary_operator_mux_net.v
 show
+```
+<img width="596" height="197" alt="ternary_operator_mux_sch" src="https://github.com/user-attachments/assets/c19c013a-586f-4503-85ab-dd4cd6371487" />
 
+```bash
 # GLS of synthesized netlist
-iverilog ./verilog_models/primitives.v ./verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v  tb_ternary_operator_mux.v
 ./a.out
 gtkwave tb_ternary_operator_mux.vcd
 ````
+<img width="1366" height="439" alt="tb_ternary_operator_mux" src="https://github.com/user-attachments/assets/655f3e8b-a42b-459d-b1c7-ec22147aba2c" />
 
 ---
 
@@ -60,22 +67,29 @@ gtkwave tb_ternary_operator_mux.vcd
 iverilog bad_mux.v tb_bad_mux.v
 ./a.out
 gtkwave tb_bad_mux.vcd
+```
+<img width="1365" height="349" alt="tb_bad_mu" src="https://github.com/user-attachments/assets/f380a072-ed6c-4448-afc6-336acf67f92d" />
 
+```bash
 # Synthesize using Yosys
 yosys
-read_liberty -lib ./lib/sky130
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog bad_mux.v
 synth -top bad_mux
-abc -liberty ./lib/sky130
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 write_verilog -noattr bad_mux_net.v
 show
+```
+<img width="588" height="201" alt="bad_mux" src="https://github.com/user-attachments/assets/dda7d501-5a6f-4c05-a4ab-0b6ab77d8e54" />
 
+```bash
 # GLS of synthesized netlist
-iverilog ./verilog_models/primitives.v ./verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
 ./a.out
 gtkwave tb_bad_mux.vcd
 ```
----
+-<img width="1366" height="435" alt="bad_mux_gls" src="https://github.com/user-attachments/assets/7e8ab0d0-2713-44a5-bd40-32d30d9d7f5a" />
+--
 
 ### 3. Blocking Caveat Example
 
@@ -84,21 +98,28 @@ gtkwave tb_bad_mux.vcd
 iverilog blocking_caveat.v tb_blocking_caveat.v
 ./a.out
 gtkwave tb_blocking_caveat.vcd
+```
+<img width="1366" height="376" alt="tb_blocking" src="https://github.com/user-attachments/assets/c7d9c9da-a224-4dad-a43a-d188b7d0cc3b" />
 
+```bash
 # Synthesize using Yosys
 yosys
-read_liberty -lib ./lib/sky130
+read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 read_verilog blocking_caveat.v
 synth -top blocking_caveat
-abc -liberty ./lib/sky130
+abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 write_verilog -noattr blocking_caveat_net.v
 show
+```
+<img width="600" height="205" alt="blocking_caveat" src="https://github.com/user-attachments/assets/c6ae7d74-77c5-4ed2-a6fa-b58046c37368" />
 
+```bash
 # GLS of synthesized netlist
-iverilog ./verilog_models/primitives.v ./verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v
+iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v
 ./a.out
 gtkwave tb_blocking_caveat.vcd
 ```
+<img width="1366" height="348" alt="Screenshot 2025-09-28 173308" src="https://github.com/user-attachments/assets/fe6ae35c-9e3c-4eb3-9292-853b487d174f" />
 
 ---
 
